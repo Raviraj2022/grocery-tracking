@@ -1,7 +1,7 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
 
 
-const OrderSchema = new mongoose({
+const OrderSchema = new mongoose.Schema({
     userId : {type: String, required: true},
     status : {type: String, enum:['pending', 'accepted', 'preparing', 'delivered'], default:'pending'},
     createdAt : {type: Date, default: Date.now}
